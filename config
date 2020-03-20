@@ -83,6 +83,7 @@ width = 100%
 height = 30
 offset-x = 
 
+; The space between the Polybar and the top edge of the monitor. (It gives a nice looking).
 offset-y = :4
 radius = 10
 
@@ -105,7 +106,11 @@ enable-ipc = true
 
 ;border-size = 2
 ;border-top-size = 3
-;border-bottom-size = 0
+
+; The space between the Polybar and the windows. (It gives a nice looking).
+border-bottom-size = :6
+
+
 border-left-size  = 16
 border-right-size = 16
 border-color = #00000000
@@ -122,13 +127,21 @@ font-1 = "FontAwesome:size=11;3"
 font-2 = "Noto Sans Mono:size=15;4"
 font-3 = "Bitstream Vera Sans:style=Roman:size=15;4"
 
-; To import devicons/icomoon font to enable Chromium icon
+; Import devicons/icomoon font to enable Chromium icon
 font-4 = "icomoon:size=15;3"
 
+; Import icomoon-feather to enable checknetwork icon
+font-5 = "icomoon\-feather:size=13;3"
 
-modules-left = cpu-graph ewmh xwindow
+; Import Ubuntu-C to test icon
+font-6 = "Ubuntu Condensed:size=15;3"
+
+;Optional modules
+; startmenu urxvt chromium thunar date  
+
+modules-left = cpu-graph ewmh xwindow 
 modules-center =  
-modules-right = urxvt pavucontrol chromium thunar volume temperature1 memory1 date1 clock powermenu 
+modules-right = updates rofi pavucontrol volume temperature1 memory1 weather date1 clock powermenu 
 
 tray-detached = false
 tray-offset-x = 
@@ -181,7 +194,7 @@ enable-ipc = true
 
 ;border-size = 2
 ;border-top-size = 3
-;border-bottom-size = 0
+border-bottom-size = :6
 border-left-size  = 16
 border-right-size = 16
 border-color = #00000000
