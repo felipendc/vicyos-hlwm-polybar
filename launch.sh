@@ -6,49 +6,8 @@
 # awesome-terminal-fonts
 # Tip : There are other interesting fonts that provide icons like nerd-fonts-complete
 
-function poly () {
-    killall -q polybar
-    while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
-    desktop=$(echo $DESKTOP_SESSION)
-    count=$(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)
-    polybar --reload mainbar-herbstluftwm -c ~/.config/polybar/config &
-}
-
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
-poly
+killall -q polybar
+while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
+desktop=$(echo $DESKTOP_SESSION)
+count=$(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)
+polybar --reload mainbar-herbstluftwm -c ~/.config/polybar/config &
